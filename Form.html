@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive JavaScript Playground</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive JavaScript Playground 🎉</h1>
+
+        <!-- Button with Event Handling -->
+        <section>
+            <h2>Event Handling</h2>
+            <button id="magicButton">Click Me!</button>
+            <p id="buttonStatus">Waiting for action...</p>
+            <input type="text" id="keyInput" placeholder="Type something...">
+            <p id="keyStatus">Press any key!</p>
+        </section>
+
+        <!-- Slideshow -->
+        <section>
+            <h2>Image Slideshow</h2>
+            <div class="slideshow">
+                <div class="slide active">
+                    <img src="images\Cloud Computing Our Modern Advantage _ Technology.jpeg" alt="Slide 1">
+                </div>
+                <div class="slide">
+                    <img src="images\Cybersecurity in 2025_ Trends and Threats You Need to Know.jpeg" alt="Slide 2">
+                </div>
+                <div class="slide">
+                    <img src="images\Up Close And Personal___ (1).jpeg" alt="Slide 3">
+                </div>
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+        </section>
+
+        <!-- Tabs -->
+        <section>
+            <h2>Content Tabs</h2>
+            <div class="tabs">
+                <button class="tab-button active" onclick="openTab(0)">Tab 1</button>
+                <button class="tab-button" onclick="openTab(1)">Tab 2</button>
+                <button class="tab-button" onclick="openTab(2)">Tab 3</button>
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane active">Welcome to Tab 1! This is some cool content.</div>
+                <div class="tab-pane">Tab 2 has even cooler content!</div>
+                <div class="tab-pane">Tab 3 is the coolest of all!</div>
+            </div>
+        </section>
+
+        <!-- Form Validation -->
+        <section>
+            <h2>Form Validation</h2>
+            <form id="userForm">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                    <span class="error" id="nameError"></span>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                    <span class="error" id="emailError"></span>
+                </div>
+                <div>
+                    <label for="password">Password (min 8 chars):</label>
+                    <input type="password" id="password" required>
+                    <span class="error" id="passwordError"></span>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
